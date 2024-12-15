@@ -1,0 +1,275 @@
+body {
+    font-family: 'Helvetica', 'Arial', sans-serif;
+    background-color: #c79b77;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.header {
+    background-color: #000;
+    color: white;
+    max-width: 1387px;
+    margin: 0 auto;
+    padding: 5px;
+    display: flex; /* Flexbox для макета */
+    justify-content: space-between; /* Выравнивание элементов */
+    align-items: center; /* Вертикальное выравнивание */
+    position: relative; /* Добавлено позиционирование */
+    z-index: 1; /* Установка z-index */
+}
+
+.username-btn {
+    margin: 0 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #222222; /* Цвет фона кнопки */
+    color: white;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.username-btn:hover {
+    background-color: #adadad; /* Цвет фона при наведении */
+}
+
+#centerLayer {
+    display: flex; /* Flexbox для контейнера */
+    flex-direction: column; /* Вертикальное расположение элементов */
+    align-items: center; /* Центрирование элементов */
+    width: 100%; /* Ширина контейнера */
+    padding: 2rem; /* Относительное значение для отступа */
+}
+
+.xxx {
+    max-width: 2000px;
+    margin: 0 auto;
+    background: rgb(49, 36, 22); /* Цвет фона в RGB */
+    padding: 1em; /* Относительное значение для отступа */
+}
+
+/* Задание цветовых значений разными способами */
+.primary-color {
+    color: #ffcc00; /* HEX */
+}
+
+.secondary-color {
+    color: rgba(255, 0, 0, 0.5); /* RGBA */
+}
+
+.tertiary-color {
+    color: hsl(120, 100%, 50%); /* HSL */
+}
+
+.verh1 {
+    display: inline-block;
+    margin: 20px;
+    text-align: center; /* Центрирование текста в блоке */
+}
+
+.verhtext,
+.verhm {
+    font-size: 20px;
+    color: white;
+    text-align: left; /* Текст выровнен по левому краю */
+    letter-spacing: 10px; /* Межбуквенное расстояние */
+}
+
+.verhm {
+    font-size: 100px; /* Большой размер шрифта */
+    font-weight: bold; /* Толщина текста */
+}
+
+.verh1 img {
+    border-radius: 8px; /* Сглаженные углы изображения */
+    border: 3px double black; /* Двойная черная рамка */
+    max-width: 100%; /* Изображение адаптируется под ширину контейнера */
+    height: auto; /* Сохранение пропорций */
+}
+
+.description hr {
+    margin: 40px 0; /* Отступы сверху и снизу */
+    border: 1px solid #000; /* Черная линия */
+}
+
+.chto {
+    background: white;
+    height: 250px; /* Фиксированная высота */
+    max-width: 1000px; /* Максимальная ширина */
+    background-position: center; /* Фон по центру */
+    background-repeat: repeat-x; /* Повторение по горизонтали */
+    width: 50%; /* Относительная ширина */
+    padding: 10px; /* Отступ внутри блока */
+    border-radius: 20px; /* Сглаженные углы */
+    border: 5px solid black; /* Черная рамка */
+    margin: 0 auto; /* Центрирование по горизонтали */
+    position: relative; /* Для корректного позиционирования */
+    z-index: 2; /* Уровень слоя */
+}
+
+.container {
+    max-width: 800px; /* Ограничение ширины раздела */
+    margin: 20px auto; /* Вертикальные отступы и центрирование по горизонтали */
+    padding: 20px; /* Внутренний отступ */
+    background-color: white; /* Белый фон */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2); /* Тень для эффекта поднятого блока */
+    border-radius: 10px; /* Сглаженные углы */
+    text-align: justify; /* Выравнивание текста по ширине */
+}
+
+/* Пример добавления адаптивности для мобильных устройств */
+@media (max-width: 768px) {
+    .verh1 {
+        margin: 10px;
+    }
+
+    .verhm {
+        font-size: 50px; /* Уменьшается размер шрифта на узких экранах */
+    }
+
+    .container {
+        padding: 10px; /* Уменьшаются внутренние отступы */
+    }
+
+    .chto {
+        width: 90%; /* Блок занимает почти всю ширину экрана */
+        height: auto; /* Высота станет адаптивной */
+    }
+}
+
+
+table {
+    width: 100%; /* Таблица занимает всю ширину контейнера */
+    border-collapse: collapse; /* Удаление внутренних отступов между ячейками */
+    border: 1px solid #ddd; /* Общая серая рамка для таблицы */
+}
+
+td, th {
+    border: 1px solid #ddd; /* Линии между ячейками */
+    vertical-align: top; /* Содержимое ячеек выравнивается по верхнему краю */
+    padding: 10px; /* Внутренние отступы */
+    text-align: left; /* Текст в ячейках выравнивается по левому краю */
+    font-size: 14px; /* Основной размер текста для таблицы */
+}
+
+th {
+    background-color: #f5f5f5; /* Серый фон для заголовков */
+    font-weight: bold; /* Выделение заголовков */
+    text-transform: uppercase; /* Преобразование текста в заголовке к верхнему регистру */
+}
+
+.destination {
+    margin-bottom: 40px; /* Отступ внизу блока */
+    text-align: left; /* Блок выравнивается по левому краю */
+}
+
+.description h1,
+.description p {
+    font-size: 24px; /* Размер текста для заголовков */
+    color: #333; /* Темный цвет текста */
+}
+
+.description p {
+    font-size: 16px; /* Размер текста для параграфов */
+    line-height: 1.5; /* Интерлиньяж */
+    color: #555; /* Бледно-серый цвет */
+    text-align: justify; /* Выравнивание текста по всей ширине */
+    margin-bottom: 20px; /* Отступ снизу */
+}
+
+.description h1 + p {
+    margin-top: 20px; /* Отступ сразу после заголовка */
+}
+
+.description h1:hover + p {
+    color: #9e9891; /* Изменение цвета текста при наведении */
+    transition: color 0.3s ease; /* Плавный переход при изменении цвета */
+}
+
+.description hr {
+    margin: 40px 0; /* Отступы сверху и снизу */
+    border: 1px solid #ddd; /* Линия светло-серого цвета */
+}
+
+/* Адаптивность таблиц на узких экранах */
+@media (max-width: 576px) {
+    table {
+        display: block; /* Таблица становится блочным элементом */
+        overflow-x: auto; /* Прокрутка по горизонтали */
+        white-space: nowrap; /* Исключение переноса текста внутри */
+    }
+
+    td, th {
+        padding: 5px; /* Уменьшение отступов */
+        font-size: 12px; /* Уменьшение размера текста */
+    }
+
+    .description h1 {
+        font-size: 20px; /* Размер заголовков уменьшен */
+    }
+
+    .description p {
+        font-size: 14px; /* Меньший размер текста параграфов */
+    }
+}
+
+
+.image img {
+    width: 100%; /* Изображение занимает всю ширину родительского контейнера */
+    max-width: 200px; /* Ограничение максимальной ширины */
+    height: auto; /* Сохранение пропорций изображения */
+    border-radius: 10px; /* Закругленные углы изображения */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Легкая тень */
+    transition: transform 0.3s ease; /* Плавный эффект масштабирования */
+}
+
+.image img:hover {
+    transform: scale(1.05); /* Увеличение изображения при наведении */
+}
+
+.image {
+    float: left; /* Изображение обтекается текстом слева */
+    margin-right: 15px; /* Отступ справа */
+    margin-bottom: 15px; /* Отступ внизу */
+    position: relative; /* Позиционирование, если нужно разместить дочерние элементы поверх */
+    z-index: 3; /* Блок выделяется над другими */
+}
+
+.image p + p {
+    margin-top: 10px; /* Отступ между параграфами внутри блока `.image` */
+}
+
+.end {
+    background-color: #000; /* Фон контейнера - черный */
+    max-width: 1387px; /* Максимальная ширина в пикселях */
+    width: 100%; /* Ширина на все доступное пространство */
+    margin: 0 auto; /* Центрирование контейнера */
+    padding: 20px; /* Внутренние отступы - немного увеличены */
+    display: flex; /* Используется flexbox для удобной верстки содержимого */
+    gap: 15px; /* Расстояние между элементами внутри блока */
+    justify-content: space-between; /* Равномерное распределение содержимого */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    position: relative; /* Контроль слоев */
+    z-index: 1; /* Установка базового уровня для этого блока */
+    color: #fff; /* Цвет текста в блоке .end - белый */
+    border-radius: 8px; /* Добавлены закругленные края */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Добавлена тень */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    .end {
+        flex-wrap: wrap; /* Переход на новую строку, если содержимое не помещается */
+        gap: 10px; /* Уменьшенное расстояние между элементами */
+        padding: 15px; /* Суженые внутренние отступы */
+    }
+
+    .image img {
+        max-width: 150px; /* Уменьшенный размер изображения */
+    }
+}
