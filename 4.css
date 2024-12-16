@@ -1,6 +1,7 @@
-*{
+* {
     box-sizing: border-box;
 }
+
 body {
     background: radial-gradient(
         circle at 50% 50%, /* Центрирование градиента */
@@ -17,25 +18,44 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center; /* Вертикальное выравнивание */
     padding: 10px 20px;
-    background-color: #fec9c3; /* Пастельный фон */
+    background-color: rgba(254, 201, 195, 0.9); /* Пастельный фон с прозрачностью */
     text-align: center;
-    border-radius: 10px
+    border-radius: 10px;
     width: 100%; /* Обеспечиваем 100% ширины */
     max-width: 1200px; /* Максимальная ширина */
     margin: 0 auto; /* Центрирование */
 }
+
 .profile-container {
+    display: flex; /* Дисплей flex для контейнера профиля */
     position: absolute;
     top: 10px; /* Сохраняем доступность кнопки */
     right: 20px; /* Отступ справа */
     z-index: 10;
-    width: 300px; /* Ширина контейнера профиля */
-    max-width: 100%; /* Максимальная ширина не больше ширины экрана */
+    width: 80%; /* Относительная ширина контейнера профиля */
+    max-width: 300px; /* Максимальная ширина */
     min-height: 50px; /* Минимальная высота */
 }
 
 .fixed {
+    display: flex; /* Добавляем flex для фиксированного элемента */
+    justify-content: space-between; /* Распределение элементов с отступами */
+    align-items: center; /* Вертикальное выравнивание */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    max-height: 60px; /* Максимальная высота фиксированного элемента */
+    border-radius: 10px;
+    z-index: 1000; /* Высокий приоритет для кнопки */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального отступа */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Плавные изменения при прокрутке */
+}
+.fixed {
+    display: flex; /* Используем flex для расположения элементов */
+    justify-content: space-between; /* Распределение элементов с отступами */
+    align-items: center; /* Вертикальное выравнивание */
     position: fixed;
     top: 0;
     width: 100%;
@@ -52,6 +72,9 @@ body {
 }
 
 .username-btn {
+    display: flex; /* Flex для кнопки */
+    align-items: center; /* Центрирование текста внутри кнопки */
+    justify-content: center; /* Центрируем содержимое по горизонтали */
     background: radial-gradient(
         circle at 50% 50%, /* Центрирование градиента */
         rgba(254, 201, 195, 1) 43.18%, /* Первый цвет с позицией */
@@ -100,56 +123,61 @@ body {
     min-width: 200px; /* Минимальная ширина подзаголовка */
     max-width: 100%; /* Максимальная ширина подзаголовка */
 }
-
 .options {
-    margin: 200px auto; /* Отступ сверху соответствует высоте header */
-    padding: 20px; /* Внутренние отступы для блока опций */
-    max-width: 600px; /* Максимальная ширина блока */
-    min-height: 300px; /* Минимальная высота блока */
+    margin: 12.5rem auto; /* Отступ сверху соответствует высоте header */
+    padding: 1.25rem; /* Внутренние отступы для блока опций */
+    max-width: 37.5rem; /* Максимальная ширина блока */
+    min-height: 18.75rem; /* Минимальная высота блока */
     text-align: center; /* Центрирование текста в блоке */
-    background-color: #f1f1f1; /* Светлый фон для выделения блока */
-    border-radius: 10px; /* Скругление углов блока */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень */
+    background-color: rgba(241, 241, 241, 1); /* Светлый фон для выделения блока */
+    border-radius: 0.625rem; /* Скругление углов блока */
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1); /* Тень */
+    display: flex; /* Flexbox для выравнивания элементов внутри */
+    flex-direction: column; /* Вертикальная ориентация элементов */
+    align-items: center; /* Центрирование элементов по горизонтали */
 }
 
 .options-title {
-    font-size: 26px; /* Размер шрифта заголовка опций */
+    font-size: 1.625rem; /* Размер шрифта заголовка опций */
     font-style: italic; /* Курсивное начертание для стиля заголовка */
-    margin-bottom: 15px; /* Отступ снизу */
-    color: #333; /* Цвет текста для лучшей читаемости */
+    margin-bottom: 0.9375rem; /* Отступ снизу */
+    color: rgb(51, 51, 51); /* Цвет текста для лучшей читаемости */
     text-align: center; /* Центрирование заголовка опций */
-    min-height: 30px; /* Минимальная высота заголовка опций */
+    min-height: 1.875rem; /* Минимальная высота заголовка опций */
     max-width: 100%; /* Максимальная ширина заголовка опций */
 }
 
 .options-list {
     list-style: none; /* Убираем стандартные маркеры списка */
     padding: 0; /* Убираем отступы */
-    min-width: 200px; /* Минимальная ширина списка */
+    min-width: 12.5rem; /* Минимальная ширина списка */
     max-width: 100%; /* Максимальная ширина списка */
+    display: flex; /* Flexbox для выравнивания элементов списка */
+    flex-direction: column; /* Вертикальная ориентация элементов списка */
+    align-items: center; /* Центрирование элементов списка */
 }
 
 .options-list li {
-    margin: 5px 0; /* Отступы между элементами списка */
+    margin: 0.3125rem 0; /* Отступы между элементами списка */
 }
 
 .options-list a {
-    color: #c69d99; /* Цвет ссылки */
+    color: rgb(198, 157, 153); /* Цвет ссылки */
     text-decoration: none; /* Убираем подчеркивание */
-    font-size: 18px; /* Размер шрифта ссылки */
+    font-size: 1.125rem; /* Размер шрифта ссылки */
     transition: color 0.3s ease; /* Плавный переход цвета при наведении */
-    min-width: 100px; /* Минимальная ширина ссылки */
+    min-width: 6.25rem; /* Минимальная ширина ссылки */
 }
 
 .options-list a:hover {
-    color: #90726f; /* Цвет ссылки при наведении */
+    color: rgb(144, 114, 111); /* Цвет ссылки при наведении */
     text-decoration: underline; /* Подчеркивание текста при наведении */
 }
 
 .container {
-    max-width: 1200px; /* Максимальная ширина контейнера */
+    max-width: 75rem; /* Максимальная ширина контейнера */
     margin: 0 auto; /* Центрирование контейнера */
-    padding: 20px; /* Внутренние отступы */
+    padding: 1.25rem; /* Внутренние отступы */
     min-height: 100vh; /* Минимальная высота контейнера, чтобы занимать всю высоту экрана */
 }
 
@@ -157,35 +185,34 @@ body {
     display: flex; /* Используем флекс для выравнивания элементов */
     flex-direction: row; /* Выстраиваем элементы в строку */
     align-items: center; /* Выравнивание по центру по вертикали */
-    padding: 15px; /* Внутренние отступы */
-    border-radius: 8px; /* Закругленные углы для современного вида */
-    background-color: #f9f9f9; /* Фоновый цвет для выделения блока */
-    min-width: 300px; /* Минимальная ширина блока */
+    padding: 0.9375rem; /* Внутренние отступы */
+    border-radius: 0.5rem; /* Закругленные углы для современного вида */
+    background-color: rgba(249, 249, 249, 1); /* Фоновый цвет для выделения блока */
+    min-width: 18.75rem; /* Минимальная ширина блока */
     max-width: 100%; /* Максимальная ширина блока */
 }
-
 .description {
     flex: 1; /* Элемент занимает оставшееся пространство */
-    margin-right: 20px; /* Отступ справа для отделения от других элементов */
-    color: #555; /* Цвет текста для улучшения читаемости */
-    font-size: 16px; /* Размер шрифта для описания */
+    margin-right: 1.25rem; /* Отступ справа для отделения от других элементов */
+    color: rgb(85, 85, 85); /* Цвет текста для улучшения читаемости */
+    font-size: 1rem; /* Размер шрифта для описания */
     text-align: justify; /* Распределяет текст по всей ширине */
-    min-height: 50px; /* Минимальная высота описания */
+    min-height: 3.125rem; /* Минимальная высота описания */
     max-width: 70%; /* Максимальная ширина описания */
 }
 
 .description + .image {
-    margin-left: 60px; /* Отступ между описанием и изображением */
-    margin-right: 10px; /* Отступ справа */
-    min-width: 100px; /* Минимальная ширина для изображения */
-    max-width: 400px; /* Максимальная ширина изображения */
+    margin-left: 3.75rem; /* Отступ между описанием и изображением */
+    margin-right: 0.625rem; /* Отступ справа */
+    min-width: 6.25rem; /* Минимальная ширина для изображения */
+    max-width: 25rem; /* Максимальная ширина изображения */
 }
 
 .image img {
     width: 100%; /* Ширина изображения занимает 100% родительского элемента */
-    max-width: 400px; /* Максимальная ширина изображения 400px */
+    max-width: 25rem; /* Максимальная ширина изображения 400px */
     height: auto; /* Высота автоматически подстраивается для сохранения пропорций */
-    border-radius: 8px; /* Закругленные углы для более современного вида */
+    border-radius: 0.5rem; /* Закругленные углы для более современного вида */
 }
 
 .description:hover ~ .image {
@@ -195,22 +222,21 @@ body {
 
 /* Объединенные селекторы */
 .container .block {
-    margin-bottom: 40px; /* Отступ между блоками */
+    margin-bottom: 2.5rem; /* Отступ между блоками */
 }
 
 .footer {
-    background-color: #fec9c3;
+    background-color: rgb(254, 201, 195); /* Светлый розовый фон */
     color: #ffffff; /* Белый текст */
-    padding: 10px 20px;
+    padding: 0.625rem 1.25rem;
     text-align: center;
-    font-size: 14px;
+    font-size: 0.875rem;
     position: relative; /* Для фиксированной позиции */
-    margin-top: 30px;
-    border-radius: 8px;
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
-    min-height: 30px; /* Минимальная высота подвала */
+    margin-top: 1.875rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 -0.125rem 0.25rem rgba(0, 0, 0, 0.1);
+    min-height: 1.875rem; /* Минимальная высота подвала */
     max-width: 100%; /* Максимальная ширина подвала */
-
 }
 
 .footer a {
@@ -219,7 +245,8 @@ body {
 
 .footer p {
     text-shadow:
-        -1px -1px 0 #90726f,
-         1px -1px 0 #90726f,
-        -1px  1px 0 #90726f,
-         1px  1px 0 #90726f; /* Применяем для p */
+        -0.0625rem -0.0625rem 0 rgb(144, 114, 111),
+         0.0625rem -0.0625rem 0 rgb(144, 114, 111),
+        -0.0625rem  0.0625rem 0 rgb(144, 114, 111),
+         0.0625rem  0.0625rem 0 rgb(144, 114, 111); /* Применяем для p */
+}
