@@ -222,7 +222,6 @@ body {
     object-position: center; /* Центрирует изображение в контейнере */
 }
 
-
 .description:hover ~ .image {
     transform: scale(1.1); /* Увеличивает размер изображения на 10% */
     transition: transform 0.3s ease; /* Плавное увеличение изображения */

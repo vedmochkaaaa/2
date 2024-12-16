@@ -1,11 +1,20 @@
 /* Общие стили */
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
+  font-family: 'Segoe Print', cursive; /* Определяем шрифт */
 }
 
 header {
-  background: #333;
+   background: radial-gradient(
+        circle at 50% 50%, /* Центрирование градиента */
+        rgba(254, 201, 195, 1) 43.18%, /* Первый цвет с позицией */
+        rgba(250, 242, 221, 1) 95.45% /* Второй цвет с позицией */
+    );
+   text-shadow:
+      -1px -1px 0 #90726f,
+       1px -1px 0 #90726f,
+      -1px  1px 0 #90726f,
+       1px  1px 0 #90726f; /* Цвет обводки */
   color: #fff;
   padding: 10px 20px;
   display: flex;
@@ -28,6 +37,9 @@ nav a:hover {
 
 main {
   padding: 20px;
+}
+main h1{
+   text-align: center;
 }
 
 form {
@@ -59,7 +71,16 @@ form select {
 }
 
 form button {
-  background: #333;
+   background: radial-gradient(
+        circle at 50% 50%, /* Центрирование градиента */
+        rgba(254, 201, 195, 1) 43.18%, /* Первый цвет с позицией */
+        rgba(250, 242, 221, 1) 95.45% /* Второй цвет с позицией */
+    );
+   text-shadow:
+      -1px -1px 0 #90726f,
+       1px -1px 0 #90726f,
+      -1px  1px 0 #90726f,
+       1px  1px 0 #90726f; /* Цвет обводки */
   color: #fff;
   border: none;
   padding: 10px;
@@ -68,15 +89,6 @@ form button {
 }
 
 form button:hover {
-  background: #555;
+  background: #fec9c3;
 }
 
-footer {
-  background: #333;
-  color: #fff;
-  text-align: center;
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  padding: 10px 0;
-}
