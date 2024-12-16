@@ -21,13 +21,6 @@ body {
     position: relative; /* Добавлено позиционирование */
     z-index: 1; /* Установка z-index */
 }
-
-.header img {
-    object-fit: cover; /* изображение заполняет контейнер */
-    object-position: center; /* изображение центрируется */
-    width: 5%; /* Задаем ширину 100% от контейнера */
-    height: auto; /* Высота будет рассчитываться пропорционально ширине */
-}
 #centerLayer {
     display: flex;
     flex-direction: column;
@@ -95,10 +88,7 @@ body {
     border-radius: 8px; /* Скругленные углы */
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2); /* Тень */
 }
-.verh1:hover {
-    transform: scale(1.05); /* Увеличение при наведении */
-    transition: transform 0.3s ease;
-}
+
 .verhtext,
 .verhm {
     font-size: 20px;
@@ -122,19 +112,6 @@ body {
         letter-spacing: 8px; /* Соответствующий интервал */
     }
 }
-
-.verh1 img {
-    border-radius: 8px; /* Сглаженные углы изображения */
-    border: 3px double black; /* Двойная черная рамка */
-    max-width: 100%; /* Адаптивная ширина */
-    height: auto; /* Сохранение пропорций */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавные эффекты */
-}
-
-.verh1 img:hover {
-    transform: scale(1.05); /* Увеличение на 5% при наведении */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3); /* Эффект поднятия */
-    cursor: pointer; /* Указатель */
 }
 .description hr {
     margin: 40px 0; /* Отступы сверху и снизу */
