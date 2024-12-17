@@ -28,7 +28,7 @@ form select:focus {
 nav a {
     color: #fff; /* Цвет текста ссылки */
     text-decoration: none; /* Убираем подчеркивание */
-    transition: color 0.3s ease; /* Плавный переход цвета */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
 }
 
 nav a:hover {
@@ -52,7 +52,8 @@ button {
 }
 
 button:hover {
-    background-color: rgb(144, 114, 111); /* Более темный оттенок при наведении */
+   background:#90726f; /* Цвет фона при наведении */
+   transform: scale(1.05); /* Лёгкое увеличение при наведении */
 }
 
 button:active {
@@ -122,7 +123,7 @@ form label {
 
 form input,
 form select {
-  width: 100%;
+  width: 95%;
   color: #90726f;
   padding: 8px;
   margin-bottom: 10px;
@@ -156,17 +157,6 @@ input:required {
 }
 input:checked {
     border: 2px solid green; /* Стили для отмеченного чекбокса */
-}
-form button:hover {
-   background:#90726f; /* Цвет фона при наведении */
-   transform: scale(1.05); /* Лёгкое увеличение при наведении */
-}
-input, textarea {
-    padding: 10px; /* Отступы внутри полей */
-    border: 1px solid rgba(144, 114, 111, 0.5); /* Граница полей */
-    border-radius: 5px; /* Закругление углов */
-    font-size: 16px; /* Размер шрифта */
-    transition: border-color 0.3s; /* Плавный переход цвета границы */
 }
 
 input:focus, textarea:focus {

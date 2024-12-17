@@ -16,12 +16,6 @@ body {
     height: 100%; /* Устанавливаем высоту body */
 }
 
-/* Выделение текста */
-::selection {
-    background: rgba(250, 242, 221, 0.8); /* Цвет выделения */
-    color: rgba(254, 201, 195, 1); /* Цвет текста при выделении */
-}
-
 /* Стили для заголовка */
 .header {
     display: flex;
@@ -46,53 +40,18 @@ body {
     z-index: 10;
     width: 80%; /* Относительная ширина контейнера профиля */
     max-width: 300px; /* Максимальная ширина */
-    min-height: 50px; /* Минимальная высота */
-}
+    min-height: 0px; /* Минимальная высота */
+    gap: 10px;  /* Промежуток между кнопками */
 
-/* Фиксированный элемент */
-.fixed {
-    display: flex; /* Используем flex для расположения элементов */
-    justify-content: space-between; /* Распределение элементов с отступами */
-    align-items: center; /* Вертикальное выравнивание */
-    position: fixed;
-    top: 0;
-    width: 100%;
-    max-height: 60px; /* Максимальная высота фиксированного элемента */
-    border-radius: 10px;
-    z-index: 1000; /* Высокий приоритет для кнопки */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального отступа */
-    transition: background-color 0.3s, box-shadow 0.3s; /* Плавные изменения при прокрутке */
-}
-
-/* Оформление полей формы */
-form input,
-form textarea {
-    width: 100%; /* Полная ширина */
-    padding: 10px; /* Внутренние отступы */
-    margin: 5px 0; /* Внешние отступы */
-    border: 1px solid #ccc; /* Бордер */
-    border-radius: 5px; /* Закруглённые углы */
-    font-size: 16px; /* Размер шрифта */
-    transition: border-color 0.3s; /* Плавные изменения цвета бордера */
-}
-
-/* Стили для полей формы при фокусе */
-form input:focus,
-form textarea:focus {
-    border-color: rgba(254, 201, 195, 1); /* Изменяем бордер при фокусе */
 }
 
 /* Стили для ссылок */
 a {
-    color: rgba(254, 201, 195, 1); /* Цвет ссылок */
+    color: white; /* Цвет ссылок */
     text-decoration: none; /* Убираем подчеркивание */
     transition: color 0.3s; /* Плавные изменения цвета */
 }
 
-/* Стили при наведении на ссылку */
-a:hover {
-    color: #ff6b6b; /* Цвет при наведении */
-}
 
 /* Стили для кнопок */
 button {
@@ -107,6 +66,7 @@ button {
     cursor: pointer; /* Указатель при наведении */
     border-radius: 5px; /* Закруглённые углы */
     transition: background 0.3s, transform 0.3s; /* Плавные переходы */
+    z-index:1000
 }
 
 /* Стили при наведении на кнопку */
@@ -120,17 +80,6 @@ button:active {
     transform: scale(0.95); /* Уменьшение при нажатии */
 }
 
-/* Стили при фокусе на кнопке */
-button:focus {
-    outline: none; /* Убираем стандартный обвод */
-
-    box-shadow: 0 0 0 3px rgba(254, 201, 195, 0.5); /* Тень при фокусе */
-}
-/* Стили при наведении на фиксированный элемент */
-.fixed:hover {
-    background: #fec9c3; /* Фон при наведении */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Увеличенная тень при наведении */
-}
 
 /* Стили для кнопки пользователя */
 .username-btn {
@@ -154,7 +103,7 @@ button:focus {
     cursor: pointer; /* Указатель при наведении */
     font-size: 14px; /* Размер шрифта */
     font-family: 'Segoe Print', cursive; /* Определяем шрифт */
-    transition: background-color 0.3s, transform 0.3s; /* Плавный эффект при наведении */
+    transition: background 0.3s, transform 0.3s, text-shadow 0.3s; /* Плавный эффект при наведении */
     min-width: 100px; /* Минимальная ширина кнопки */
     max-width: 200px; /* Максимальная ширина кнопки */
     height: 40px; /* Высота кнопки */
@@ -164,13 +113,40 @@ button:focus {
 .username-btn:hover {
     background: #90726f; /* Более темный оттенок при наведении */
     transform: scale(1.05); /* Увеличение кнопки при наведении */
+    text-shadow:
+        -1px -1px 0 #fff, /* Светлая тень при наведении */
+         1px -1px 0 #fff,
+        -1px  1px 0 #fff,
+         1px  1px 0 #fff; /* Обводка текста при наведении */
 }
+
 
 /* Стили для ссылки внутри кнопки пользователя */
 .username-btn a {
     text-decoration: none; /* Убираем подчеркивание у ссылки */
     color: white; /* Белый цвет текста для ссылки внутри кнопки */
 }
+
+/* Стили при наведении на фиксированный элемент */
+.fixed:hover {
+    background: #fec9c3; /* Фон при наведении */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15); /* Увеличенная тень при наведении */
+}
+
+.fixed {
+    display: flex; /* Используем flex для расположения элементов */
+    justify-content: space-between; /* Распределение элементов с отступами */
+    align-items: center; /* Вертикальное выравнивание */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 80px; /* Установленная высота фиксированного элемента */
+    border-radius: 10px;
+    z-index: 1000; /* Высокий приоритет для кнопки */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Тень для визуального отступа */
+    transition: background-color 0.3s, box-shadow 0.3s; /* Плавные изменения при прокрутке */
+}
+
 
 /* Стили для основного заголовка */
 .header-main {
@@ -232,11 +208,12 @@ button:focus {
 }
 
 /* Стили для ссылок в списке опций */
+/* Стили для ссылок */
 .options-list a {
     color: rgb(198, 157, 153); /* Цвет ссылки */
     text-decoration: none; /* Убираем подчеркивание */
     font-size: 1.125rem; /* Размер шрифта ссылки */
-    transition: color 0.3s ease; /* Плавный переход цвета при наведении */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания при наведении */
     min-width: 6.25rem; /* Минимальная ширина ссылки */
 }
 
@@ -246,12 +223,20 @@ button:focus {
     text-decoration: underline; /* Подчеркивание текста при наведении */
 }
 
+
 /* Стили для контейнера */
 .container {
     max-width: 75rem; /* Максимальная ширина контейнера */
     margin: 0 auto; /* Центрирование контейнера */
     padding: 1.25rem; /* Внутренние отступы */
     min-height: 100vh; /* Минимальная высота контейнера, чтобы занимать всю высоту экрана */
+    opacity: 0; /* Скрыто по умолчанию */
+    animation: fadeIn 0.5s forwards 1s; /* Параметры анимации появления */
+}
+/* Анимация появления для контейнера */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
 }
 
 /* Стили для блока внутри контейнера */
@@ -264,7 +249,22 @@ button:focus {
     background-color: rgba(249, 249, 249, 1); /* Фоновый цвет для выделения блока */
     min-width: 18.75rem; /* Минимальная ширина блока */
     max-width: 100%; /* Максимальная ширина блока */
+    opacity: 0; /* Скрыто по умолчанию */
+    animation: slideUp 0.5s forwards; /* Параметры анимации для каждого блока */
 }
+/* Анимация появления блока */
+@keyframes slideUp {
+    0% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Задержка для каждого блока */
+.block:nth-child(1) { animation-delay: 1s; }
+.block:nth-child(2) { animation-delay: 2s; }
+.block:nth-child(3) { animation-delay: 3s; }
+.block:nth-child(4) { animation-delay: 4s; }
+.block:nth-child(5) { animation-delay: 5s; }
+
 /* Стили для описания */
 .description {
     flex: 1; /* Элемент занимает оставшееся пространство */
@@ -288,9 +288,11 @@ button:focus {
 .image {
     display: flex; /* Используйте flexbox для лучшего выравнивания изображений */
     justify-content: center; /* Центрирование изображений внутри контейнера */
+    background-color: #000000;
 }
 
 /* Стили для изображений в контейнере */
+/* Стили для изображений */
 .image img {
     width: 100%; /* Ширина изображения занимает 100% родительского элемента */
     max-width: 25rem; /* Максимальная ширина изображения */
@@ -298,13 +300,14 @@ button:focus {
     border-radius: 0.5rem; /* Закругленные углы для более современного вида */
     object-fit: cover; /* Обеспечивает сохранение соотношения сторон без искажений */
     object-position: center; /* Центрирует изображение в контейнере */
+    transition: transform 0.3s ease; /* Плавное изменение при наведении */
 }
 
 /* Эффект увеличения при наведении на описание */
-.description:hover ~ .image {
+.description:hover ~ .image img {
     transform: scale(1.1); /* Увеличивает размер изображения на 10% */
-    transition: transform 0.3s ease; /* Плавное увеличение изображения */
 }
+
 
 /* Объединенные селекторы для блока внутри контейнера */
 .container .block {
@@ -326,7 +329,7 @@ button:focus {
     max-width: 100%; /* Максимальная ширина подвала */
 }
 
-/* Стили для ссылок в подвале */
+/* Стили для ссылок */
 .footer a {
     text-shadow: none; /* Исключаем тень для a */
 }

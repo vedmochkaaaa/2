@@ -1,0 +1,217 @@
+/* Общие стили */
+body {
+    font-family: 'Segoe Print', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+header {
+   width: 100%; /* Ширина на всю ширину окна */
+   height: 60px; /* Задать фиксированную высоту */
+   background: radial-gradient(
+        circle at 50% 50%, /* Центрирование градиента */
+        rgba(254, 201, 195, 1) 43.18%, /* Первый цвет с позицией */
+        rgba(250, 242, 221, 1) 95.45% /* Второй цвет с позицией */
+    );
+   text-shadow:
+      -1px -1px 0 #90726f,
+       1px -1px 0 #90726f,
+      -1px  1px 0 #90726f,
+       1px  1px 0 #90726f; /* Цвет обводки */
+   color: #fff;
+   padding: 10px 20px; /* Внутренние отступы */
+   display: flex;
+   justify-content: space-between; /* Распределение элементов */
+}
+
+
+nav {
+  display: flex;
+  gap: 15px;
+}
+/* Стилизация ссылок в навигации */
+nav a {
+    color: #fff; /* Цвет текста ссылки */
+    text-decoration: none; /* Убираем подчеркивание */
+    transition: color 0.3s ease, text-decoration 0.3s ease; /* Плавный переход цвета и подчеркивания */
+}
+
+nav a:hover {
+    color: rgb(198, 157, 153); /* Цвет ссылки при наведении */
+    text-decoration: underline; /* Подчеркивание при наведении */
+}
+
+h1 {
+    font-size: 2rem;
+    color: #e7b389;
+    margin-bottom: 40px;
+}
+.gradient-example {
+    width: 800px;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.gradient-example:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+.linear-gradient {
+    background: linear-gradient(45deg, #ff7e5f, #feb47b);
+}
+
+.radial-gradient {
+    background: radial-gradient(circle, #ff7e5f, #feb47b);
+}
+
+.conic-gradient {
+    background: conic-gradient(#ff7e5f, #feb47b, #ff7e5f);
+}
+
+/* Стили для 2D-преобразований */
+.transform-example {
+    width: 800px;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.transform-example:hover {
+    transform: scale(1.1) rotate(15deg);
+}
+.transform-example-2d {
+    width: 800px;
+    height: 200px;
+    margin: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #333; /* Синий фон */
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.transform-example-2d:hover {
+    transform: scale(1.1); /* Только увеличение без вращения */
+}
+
+/* Стили для 3D-преобразований */
+.transform-3d {
+    width: 800px;
+    height: 200px;
+    background: #c5ddff;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 12px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.transform-3d:hover {
+    transform: rotateY(180deg);
+}
+.transform-3d-2 {
+    width: 800px;
+    height: 200px;
+    background: #c5ddff; /* Оранжевый фон */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    border-radius: 12px;
+    transform-style: preserve-3d;
+    transition: transform 0.6s ease;
+}
+
+.transform-3d-2:hover {
+    transform: rotateX(180deg); /* Вращение вокруг оси X */
+}
+
+/* Стили для плавных переходов */
+/* Классический стиль перехода */
+.transition-classic {
+    background-color: pink; /* Зеленый фон */
+    color: white;
+    width: 800px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; /* Убираем границу */
+    border-radius: 5px; /* Мягкие углы */
+    font-weight: bold;
+    text-transform: uppercase; /* Заглавные буквы */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Плавный переход по цвету и масштабу */
+    margin-bottom: 20px; /* Расстояние между стилями */
+}
+
+.transition-classic:hover {
+    background-color: grey; /* Темно-зеленый при наведении */
+    transform: scale(1.05); /* Немного увеличиваем */
+}
+
+/* Эффект при нажатии */
+.transition-classic:active {
+    transform: scale(0.95); /* Сжимаем кнопку */
+}
+/* Современный стиль с градиентом */
+.transition-modern {
+    background: linear-gradient(45deg, #ff6b6b, #f7a8a1); /* Градиент от красного к розовому */
+    color: white;
+    width: 800px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: none; /* Убираем границу */
+    border-radius: 25px; /* Ярко выраженные округлые углы */
+    font-weight: bold;
+    letter-spacing: 1px;  /* Увеличиваем межбуквенное расстояние */
+    cursor: pointer;
+    transition: transform 0.4s ease, box-shadow 0.4s ease; /* Плавный переход размера и теней */
+    box-shadow: 0 4px 15px rgba(255, 107, 107, 0.5); /* Мягкая тень */
+}
+
+.transition-modern:hover {
+    transform: translateY(-5px); /* Перемещение вверх при наведении */
+    box-shadow: 0 8px 30px rgba(255, 107, 107, 0.7); /* Увеличенная тень */
+}
+
+/* Эффект при нажатии */
+.transition-modern:active {
+    transform: translateY(0); /* Возвращение на место при нажатии */
+    box-shadow: 0 4px 10px rgba(255, 107, 107, 0.5); /* Уменьшаем тень */
+}
+
