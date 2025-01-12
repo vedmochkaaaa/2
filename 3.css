@@ -4,7 +4,7 @@ html, body {
     font-family: Arial, sans-serif;
 }
 
-.grid-container {
+.container {
     display: grid;
     grid-template-columns: 300px 1fr;
     grid-template-rows: 100px auto 50px;
@@ -20,12 +20,12 @@ html, body {
     padding: 20px;
 }
 
-.sidebar {
+.description {
     background-color: #F4F4F4;
     padding: 20px;
 }
 
-.main-content {
+.block {
     background-color: #FFF8DC;
     padding: 20px;
 }
