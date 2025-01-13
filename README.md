@@ -28,7 +28,9 @@
 |9|list-style:[disc inside]|является сокращением для установки нескольких связанных со списком свойств|[Магвай](https://magwai.ru/)|
 |10|overflow:[visible; hidden; scroll; auto;]|отображение содержимого эмемента, если оно выходит за пределы области видимости|[Космос-Веб](https://www.cosmos-web.ru/)|
 
-### Структура страницы BRAIND до 5 уровней вложенности [BRAIND](https://braind.agency/?erid=2W5zFGRQtV6&utm_source=ratingruneta&utm_medium=advmiddle&utm_campaign=production&rrcid=173670833132867035)
+### Структура страницы [BRAIND](https://braind.agency/?erid=2W5zFGRQtV6&utm_source=ratingruneta&utm_medium=advmiddle&utm_campaign=production&rrcid=173670833132867035) до 5 уровней вложенности 
+
+![Вид сайта](https://github.com/vedmochkaaaa/2/blob/main/braind.png)
 ```
 <body>
   <!-- Уровень 1 -->
@@ -240,6 +242,9 @@
 14. Проверьте работу формы в разных браузерах и проверьте корректность передачи данных.
 
 Следуя этим шагам, вы сможете реализовать контактную форму, аналогичную той, что находится на сайте BRAIND.
+
+### Результат
+![Результат работы]()
 
 ### Ресурсы для изучения верстки
 1. [Курс на Skillbox](https://bootcamp.skillbox.ru/digital-design-mini?utm_source=yandex&utm_medium=cpc&utm_campaign=all_all_yandex_cpc_master-campaign_bootcamp-623_all_short_skillbox_99997794&utm_content=adg_5325525788%7Cad_16397234244%7Cph_48245231145%7Ckey_---autotargeting%7Cdev_desktop%7Cpst_premium_1%7Crgnid_172_Уфа%7Cplacement_none%7Ccreative_%7Bcreative_name%7D&utm_term=---autotargeting&yclid=683355871678038015)
