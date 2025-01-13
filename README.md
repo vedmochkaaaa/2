@@ -13,3 +13,17 @@
 1. [Космос-Веб](https://www.cosmos-web.ru/) - специализируется на предоставлении услуг в области веб-разработки и IT-решений.
 1. [Uplab](https://www.uplab.ru/?utm_source=ratingruneta&utm_medium=cpc&utm_content=web&utm_campaign=hyperlink_option&rrcid=173670833132867035) - специализируется на создании современных сайтов, мобильных приложений и сложных IT-решений.
 1. [Магвай](https://magwai.ru/) - специализирующаяся на разработке и внедрении технологий для автоматизации бизнес-процессов.
+
+### Описание свойств CSS
+|№|Свойство|Назначение|Где встретилось|
+|-|--------|----------|---------------|
+|1|-webkit-text-size-adjust|адаптирование текста  к изменениям масштаба|[Космос-Веб](https://www.cosmos-web.ru/)|
+|2|--swiper-theme-color|задает основной цвет для различных элементов слайдера|[Liqium](https://www.liqium.com/)|
+|3|unicode-bidi:[normal, embed, bidi-override, isolate, plaintext, initial, inherit]|отображение текста и его составляющих в зависимости от их направления|[MWI](https://mwi.me/)|
+|4|--swiper-theme-color|отображение текста и его составляющих в зависимости от их направления|[ADV](https://adv.ru/?rrcid=173670833132867035#CoreVerticals)|
+|5|aspect-ratio:[width/height, auto, inherit, initial, revert, unset]|явная установка соотношения сторон элемента|[Факт](https://fact.digital/)|
+|6|--smart-captcha-doc-height|используется для хранения и динамического управления определённой высотой|[Uplab](https://www.uplab.ru/?utm_source=ratingruneta&utm_medium=cpc&utm_content=web&utm_campaign=hyperlink_option&rrcid=173670833132867035)|
+|7|visibility:[visible;hidden;collapse; inherit;]|используется для управления видимостью элемента на веб-странице|[Notamedia](https://nota.media/)|
+|8|mobile|стиль, применяющийся только к мобильным устройствам|[PINKMAN](https://www.pinkman.ru/)|
+|9|list-style:[disc inside]|является сокращением для установки нескольких связанных со списком свойств|[Магвай](https://magwai.ru/)|
+|10|overflow:[visible; hidden; scroll; auto;]|отображение содержимого эмемента, если оно выходит за пределы области видимости|[Космос-Веб](https://www.cosmos-web.ru/)|
