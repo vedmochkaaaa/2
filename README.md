@@ -111,3 +111,144 @@
 ### Итог
 
 Сайт BRAIND демонстрирует разумное использование современных подходов к разработке веб-интерфейса, таких как BEM и HTML5. Код легок в понимании и обслуживании, с логичной структурой и ясной семантикой, что подчеркивает качественный подход к веб-разработке.
+
+# Описание реализации контактной формы [BRAIND](https://braind.agency/?erid=2W5zFGRQtV6&utm_source=ratingruneta&utm_medium=advmiddle&utm_campaign=production&rrcid=173670833132867035)
+
+Шаг 1: Создание HTML-структуры
+
+1. Откройте ваш HTML-файл и создайте основной контейнер для контактной формы, используя тег <div> с классом, например, .contact-form-container.
+
+    ```
+    <div class="contact-form-container">
+        <!-- Ваша контактная форма будет здесь -->
+    </div>
+    ```
+
+Шаг 2: Добавление заголовка
+
+2. Внутри контейнера добавьте заголовок с помощью тега ``` <h2> ```, например, "Свяжитесь с нами".
+
+    ```
+    <h2>Свяжитесь с нами</h2>
+    ```
+
+Шаг 3: Создание формы
+
+3. Добавьте элемент ```<form>``` внутри контейнера для создания формы и укажите метод отправки, например, post.
+    
+    ```
+    <form method="post" action="/submit-form">
+        <!-- Поля формы будут здесь -->
+    </form>
+    ```
+
+Шаг 4: Поле для имени
+
+4. Внутри формы добавьте поле ввода для имени пользователя с помощью тега ```<input>``` с типом text.
+
+    ```
+    <input type="text" name="name" placeholder="Ваше имя" required>
+    ```
+
+Шаг 5: Поле для электронной почты
+
+5. Добавьте поле ввода для электронной почты с типом email.
+
+    ```
+    <input type="email" name="email" placeholder="Ваш Email" required>
+    ```
+
+Шаг 6: Поле для сообщения
+
+6. Добавьте текстовое поле для ввода сообщения с помощью тега ```<textarea>```.
+
+    ```
+    <textarea name="message" placeholder="Ваше сообщение" required></textarea>
+    ```
+
+Шаг 7: Кнопка отправки
+
+7. Добавьте кнопку для отправки формы с помощью тега ```<button>```.
+
+    ```
+    <button type="submit">Отправить</button>
+    ```
+
+Шаг 8: Стилизация контейнера
+
+8. Перейдите к вашему CSS-файлу, чтобы стилизовать контейнер формы. Установите ширину, отступы и выберите шрифт.
+
+    ```
+    .contact-form-container {
+        width: 80%;
+        margin: auto;
+        font-family: Arial, sans-serif;
+    }
+    ```
+
+Шаг 9: Стилизация формы
+
+9. Задайте стиль для элементов формы, таких как поля ввода и текстовые поля, добавив отступы и границы.
+
+    ```
+    input, textarea {
+        width: 100%;
+        padding: 10px;
+        margin: 5px 0;
+        border: 1px solid #ccc;
+    }
+    ```
+
+Шаг 10: Стилизация кнопки
+
+10. Стилизуйте кнопку отправки, добавив фон, цвет текста и другие эффекты визуального оформления.
+
+    ```
+    button {
+        background-color: #333;
+        color: white;
+        padding: 10px 15px;
+        border: none;
+        cursor: pointer;
+    }
+    ```
+
+Шаг 11: Добавление hover-эффекта
+
+11. Добавьте эффект наведения для кнопки, чтобы улучшить интерактивность.
+
+    ```
+    button:hover {
+        background-color: #555;
+    }
+    ```
+
+Шаг 12: Валидация формы на стороне клиента
+
+12. Добавьте валидацию формы на стороне клиента, используя простые HTML-атрибуты, такие как required, и регулярные выражения для проверки формата электронной почты.
+
+    ```
+    <input type="email" name="email" placeholder="Ваш Email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+    ```
+
+Шаг 13: Настройка отправки на стороне сервера
+
+13. Настройте серверный файл для обработки данных формы. Например, используйте Python или PHP для сохранения информации.
+
+Шаг 14: Тестирование
+
+14. Проверьте работу формы в разных браузерах и проверьте корректность передачи данных.
+
+Следуя этим шагам, вы сможете реализовать контактную форму, аналогичную той, что находится на сайте BRAIND.
+
+### Ресурсы для изучения верстки
+1. [Курс на Skillbox](https://bootcamp.skillbox.ru/digital-design-mini?utm_source=yandex&utm_medium=cpc&utm_campaign=all_all_yandex_cpc_master-campaign_bootcamp-623_all_short_skillbox_99997794&utm_content=adg_5325525788%7Cad_16397234244%7Cph_48245231145%7Ckey_---autotargeting%7Cdev_desktop%7Cpst_premium_1%7Crgnid_172_Уфа%7Cplacement_none%7Ccreative_%7Bcreative_name%7D&utm_term=---autotargeting&yclid=683355871678038015)
+1. [Обучающие уроки](https://vk.com/web_and_graph?search_track_code=63957072r5TWKLxmrsxcCjkwinuMeO_LdCrC9O9A-m1KGxDuANj3C33ZaqAwW-TGDwnPKdUzv6VGKtzzh0GX&from=search)
+1. [Канал веб-программирования](https://youtube.com/@educatterofficial?feature=shared)
+1. [Создание веб-сайтов](https://youtube.com/@brainscloud?feature=shared)
+1. [Онлайн школа программирования и веб-разработки](https://youtube.com/@itproger?feature=shared)
+1. [Онлайн школа программирования и веб-разработки(2)](https://youtube.com/@webproschool?feature=shared)
+1. [Веб-дизайн в Figma](https://t.me/figmaweb)
+1. [HTML и CSS для новичков](https://code.mu/ru/markup/book/prime/)
+1. [CSS учебник](https://www.schoolsw3.com/css/)
+1. [HTML учебник](https://www.schoolsw3.com/html/index.php)
